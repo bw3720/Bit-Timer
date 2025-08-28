@@ -21,11 +21,11 @@ const settingConfigs = {
 const initialState = {
   // 설정 값
   sets: 3,
-  workTime: 25,
-  restTime: 10,
+  workTime: 20,
+  restTime: 20,
   // 타이머 상태
   currentSet: 1,
-  currentTime: 25, // 시작 시 workTime으로 설정됨
+  currentTime: 20, // 시작 시 workTime으로 설정됨
   isWorking: true, // true: 운동, false: 휴식
   isActive: false, // 타이머 활성화 여부
   isFinished: false, // 운동 완료 여부
