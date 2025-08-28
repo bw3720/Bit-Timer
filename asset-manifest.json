@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Bit-Timer/static/css/main.37a6ea5b.css",
+    "main.js": "/Bit-Timer/static/js/main.019e6ac6.js",
+    "static/js/453.253fb096.chunk.js": "/Bit-Timer/static/js/453.253fb096.chunk.js",
+    "index.html": "/Bit-Timer/index.html",
+    "main.37a6ea5b.css.map": "/Bit-Timer/static/css/main.37a6ea5b.css.map",
+    "main.019e6ac6.js.map": "/Bit-Timer/static/js/main.019e6ac6.js.map",
+    "453.253fb096.chunk.js.map": "/Bit-Timer/static/js/453.253fb096.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37a6ea5b.css",
+    "static/js/main.019e6ac6.js"
+  ]
+}
