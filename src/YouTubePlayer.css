@@ -1,0 +1,56 @@
+.audio-player-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1c1e24; /* App-header보다 약간 어두운 색 */
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #eee;
+}
+
+.music-info {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 20px;
+}
+
+.music-title {
+  font-size: 1rem;
+}
+
+.play-pause-button {
+  background: none;
+  border: 2px solid #61dafb;
+  color: #61dafb;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  /* 아이콘 위치 미세조정 */
+  padding-left: 2px; 
+}
+
+/* 실제 유튜브 플레이어는 화면 밖으로 숨김 */
+.youtube-iframe-wrapper {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

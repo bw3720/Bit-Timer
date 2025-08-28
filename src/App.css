@@ -1,16 +1,10 @@
+/* 페이지 전체 스크롤 방지 */
+html, body {
+  overflow: hidden;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -22,17 +16,215 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header.workout-bg {
+  /* 운동 중: 차분한 녹색 계열 */
+  background-color: #4add63;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header.rest-bg {
+  /* 휴식 중: 따뜻한 주황색 계열 */
+  background-color: #fd8b49;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+/* --- Container Styles --- */
+.setup-container,
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* space between elements */
+  width: 100%;
+  max-width: 400px;
+}
+
+/* --- Settings Screen --- */
+.settings-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.setting-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #3a3f4a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-sizing: border-box; /* 추가: 패딩과 보더를 너비에 포함 */
+}
+
+.setting-display:hover {
+  background-color: #4a4f5a;
+}
+
+.setting-label {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.setting-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.total-time-display {
+  text-align: center;
+}
+
+.total-time-display p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.total-time-display span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* --- Timer Screen --- */
+.timer-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-display h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.timer-display .time-text {
+  font-size: 8rem;
+  font-weight: bold;
+  margin: 10px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.timer-display .set-text {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* --- Controls --- */
+.controls {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  background-color: #4a4f5a;
+  color: white;
+}
+
+button:hover {
+  background-color: #616a7a;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.start-button {
+  background-color: #7cc0cf;
+  color: #282c34;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+}
+
+.start-button:hover {
+  background-color: #88eaff;
+}
+
+/* --- Modal & Slider Styles --- */
+.modal-title {
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.slider-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #4a4f5a;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #61dafb;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #61dafb;
+  cursor: pointer;
+  border: none;
+}
+
+.confirm-button {
+  background-color: #61dafb;
+  color: #282c34;
+  width: 100%;
 }
